@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admission Form</title>
+</head>
+<body>
+
+<h1>Admission Form</h1>
+
+<form>
+  Name:<br>
+  <input type="text" name="name"><br>
+  Registration Number:<br>
+  <input type="text" name="registration"><br>
+  Phone Number:<br>
+  <input type="text" name="phone"><br>
+  City:<br>
+  <input type="text" name="city"><br><br>
+</form> 
+
+<button onclick="confirmSubmission()">Submit</button>
+
+<script>
+function confirmSubmission() {
+  if (confirm("Are you sure you want to submit this form?")) {
+    // Submit the form
+  } else {
+    // Do nothing
+  }
+}
+</script>
+
+</body>
+</html>

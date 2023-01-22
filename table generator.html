@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>HTML Table Generator</title>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <script>
+    
+      var rows = prompt("Enter the number of rows:");
+      var cols = prompt("Enter the number of columns:");
+
+      
+      var html = "<table>";
+      for (var i = 0; i < rows; i++) {
+        html += "<tr>";
+        for (var j = 0; j < cols; j++) {
+          html += "<td>" + "</td>";
+        }
+        html += "</tr>";
+      }
+      html += "</table>";
+
+      
+      document.write(html);
+    </script>
+  </body>
+</html>
