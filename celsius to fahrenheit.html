@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Temperature Converter</title>
+</head>
+<body>
+<h1>Temperature Converter</h1>
+<form>
+Enter temperature in Celsius: <input type="text" id="celsiusInput" /><br><br>
+Enter temperature in Fahrenheit: <input type="text" id="fahrenheitInput" /><br><br>
+</form>
+<button onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+<button onclick="convertToCelsius()">Convert to Celsius</button>
+
+<p id="result"></p>
+<script>
+function convertToFahrenheit() {
+  var celsius = document.getElementById("celsiusInput").value;
+  var fahrenheit = (celsius * 9/5) + 32;
+  document.getElementById("result").innerHTML = celsius + "°C is " + fahrenheit + "°F";
+}
+
+function convertToCelsius() {
+  var fahrenheit = document.getElementById("fahrenheitInput").value;
+  var celsius = (fahrenheit - 32) * 5/9;
+  document.getElementById("result").innerHTML = fahrenheit + "°F is " + celsius + "°C";
+}
+</script>
+</body>
+</html>
+  

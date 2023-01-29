@@ -1,0 +1,47 @@
+<html>
+<body>
+
+<h1>Electricity Bill Calculator</h1>
+
+<p>Enter your name:</p>
+<input type="text" id="name"><br>
+
+<p>Enter the month and year:</p>
+<input type="text" id="month" placeholder="Month">
+<input type="number" id="year" placeholder="Year"><br>
+
+<p>Enter the number of units consumed:</p>
+<input type="number" id="units"><br>
+
+<p>Enter the cost per unit:</p>
+<input type="number" id="cost"><br>
+
+<button onclick="calculateBill()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function calculateBill() {
+  // Get the values from the input fields
+  var name = document.getElementById("name").value;
+  var month = document.getElementById("month").value;
+  var year = document.getElementById("year").value;
+  var units = document.getElementById("units").value;
+  var cost = document.getElementById("cost").value;
+
+  // Calculate the total cost
+  var totalCost = units * cost;
+
+  // Print the electricity bill
+  var bill = "Electricity Bill for " + name + "<br>" +
+             "Month: " + month + "<br>" +
+             "Year: " + year + "<br>" +
+             "Number of Units: " + units + "<br>" +
+             "Cost per Unit: " + cost + "<br>" +
+             "Total Cost: " + totalCost;
+  document.getElementById("result").innerHTML = bill;
+}
+</script>
+
+</body>
+</html>

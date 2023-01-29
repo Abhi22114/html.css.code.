@@ -1,0 +1,52 @@
+<html>
+  <body>
+    <h1>Form Validator</h1>
+
+    <p>Enter your name:</p>
+    <input type="text" id="name" /><br />
+
+    <p>Enter your email:</p>
+    <input type="text" id="email" /><br />
+
+    <p>Enter your password:</p>
+    <input type="password" id="password" /><br />
+
+    <button onclick="validate()">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+      function validate() {
+        // Get the values from the input fields
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        // Validate the required fields
+        if (name == "") {
+          alert("Please enter your name.");
+          return;
+        }
+        if (email == "") {
+          alert("Please enter your email.");
+          return;
+        }
+        if (password == "") {
+          alert("Please enter your password.");
+          return;
+        }
+
+        // Validate the email
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email.");
+          return;
+        }
+
+        // If all the fields are valid, show a success message
+        document.getElementById("result").innerHTML =
+          "Form submitted successfully!";
+      }
+    </script>
+  </body>
+</html>

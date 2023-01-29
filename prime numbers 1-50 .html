@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prime Numbers Generator</title>
+  </head>
+  <body>
+    <h1>Prime Numbers Generator</h1>
+
+    <h2>Prime Numbers:</h2>
+    <ul id="prime-numbers"></ul>
+
+    <script>
+      // Create a variable to store all prime numbers
+      let primeNumbers = [];
+
+      // Loop through all numbers from 1 to 50
+      for (let i = 1; i <= 50; i++) {
+        // Assume that the number is prime
+        let isPrime = true;
+
+        // Check if the number is prime by dividing it by all numbers
+        // from 2 to the number itself and checking if there is a remainder
+        for (let j = 2; j < i; j++) {
+          if (i % j === 0) {
+            // If there is a remainder, the number is not prime
+            isPrime = false;
+            break;
+          }
+        }
+
+        // If the number is prime, add it to the primeNumbers array
+        if (isPrime) {
+          primeNumbers.push(i);
+        }
+      }
+
+      // Create a variable to store the list of prime numbers
+      let list = document.getElementById("prime-numbers");
+
+      // Add each prime number to the list
+      for (let i = 0; i < primeNumbers.length; i++) {
+        let item = document.createElement("li");
+        item.innerHTML = primeNumbers[i];
+        list.appendChild(item);
+      }
+    </script>
+  </body>
+</html>

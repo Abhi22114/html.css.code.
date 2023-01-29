@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Events</title>
+</head>
+<body>
+<form onsubmit="submitFunction()">
+	<label for="input">Enter text:</label><br>
+	<input type="text" id="input" onkeypress="keyPressFunction()"><br>
+	<input type="submit" value="Submit">
+</form>
+<script>
+	function submitFunction() {
+		alert("Form submitted!");
+	}
+	function keyPressFunction() {
+		alert("Key pressed!");
+	}
+</script>
+</body>
+</html>
